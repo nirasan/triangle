@@ -1,15 +1,26 @@
 class Triangle
+
+  @@message = {
+      equilateral_triangle: "正三角形ですね！",
+      isosceles_triangle: "二等辺三角形ですね！",
+      scalene_triangle: "不等辺三角形ですね！",
+      none: "三角形じゃないです＞＜"
+  }
+  def self.get_message
+    @@message
+  end
+
   def self.name_for(n1, n2, n3)
     if self.triangle?(n1, n2, n3)
       if self.equilateral_triangle?(n1, n2, n3)
-        "正三角形ですね！"
+        @@message[:equilateral_triangle]
       elsif self.isosceles_triangle?(n1, n2, n3)
-        "二等辺三角形ですね！"
+        @@message[:isosceles_triangle]
       else
-        "不等辺三角形ですね！"
+        @@message[:scalene_triangle]
       end
     else
-      "三角形じゃないです＞＜"
+      @@message[:none]
     end
   end
 
