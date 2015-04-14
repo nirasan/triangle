@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../triangle')
+require File.expand_path(File.dirname(__FILE__) + '/../triangle_class')
 
 describe Triangle do
   it "name_for method" do
